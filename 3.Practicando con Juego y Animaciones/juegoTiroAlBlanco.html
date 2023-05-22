@@ -1,0 +1,70 @@
+<canvas width="600" height="600"> </canvas>
+
+<script>
+    var pantalla = document.querySelector("canvas");
+    var pincel = pantalla.getContext("2d");
+    var width = 600;
+    var height = 600
+    var radio = 10;
+    var posicionX = 0;
+    var posicionY = 0;
+    pincel.fillStyle = "lightgrey";
+    pincel.fillRect(0, 0, width, height);
+
+    function crearCircunferencia(x, y, radio, color) {
+        pincel.fillStyle = color;
+        pincel.beginPath();
+        pincel.arc(x, y, radio, 0, 2 * Math.PI);
+        pincel.fill();
+    }
+
+    function crearObjetivo(x, y) {
+        crearCircunferencia(x, y, radio + 20, "red");
+        crearCircunferencia(x, y, radio + 10, "white");
+        crearCircunferencia(x, y, radio, "red");
+    }
+
+    function posicionRandom(valorMaxino) {
+        return Math.floor(Math.random() * valorMaxino);
+    }
+
+    function limpiarPantalla() {
+
+        pincel.clearRect(0, 0, width, height);
+
+    }
+
+    var x = 0
+
+    function actualizarPantalla() {
+
+        limpiarPantalla();
+
+        posicionX = posicionRandom(width);
+        posicionY = posicionRandom(height);
+
+        crearObjetivo(posicionX, posicionY);
+        x++;
+    }
+
+    setInterval(actualizarPantalla, 1000);
+    //actualizarPantalla();
+
+    function disparo(event) {
+        var posDisparoX = event.pageX - pantalla.offsetLeft;
+        var posDisparoY = event.pageY - pantalla.offsetTop;
+
+        if (
+            (posDisparoX < posicionX + radio) &&
+            (posDisparoX > posicionX - radio) &&
+            (posDisparoY < posicionY + radio) &&
+            (posDisparoY > posicionY - radio)
+        ) {
+            alert("Dio en el Blanco.!")
+        }
+    }
+
+    pantalla.onclick = disparo;
+
+
+</script>
