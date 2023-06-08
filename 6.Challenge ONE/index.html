@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Challenge Encriptador By Moises Romero G5-ONE</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='assets/css/style.css'>
+    <script src='main.js'></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="assets/images/Logo.svg" alt="Logo">
+    </header>
+    <main>
+        <section class="containerOne">
+            <div class="containerForm">
+                <textarea placeholder="Ingrese Texto" class="boxText"></textarea>
+            </div>
+            <div class="alerta">
+                <img src="assets/images/alerta.svg" alt="alert">
+                <p>Solos letras minusculas y sin acentos</p>
+            </div>
+            <div class="containerBtn">
+                <input type="button" class="btn-encriptar" value="Encriptar">
+                <input type="button" class="btn-desencriptar" value="Desencriptar">
+            </div>
+        </section>
+        <section class="containerTwo">
+            <div class="containerResultsImage">
+                <img src="assets/images/Muñeco.svg">
+            </div>
+            <div class="containerParagraph">
+                <h3>Ningun mensaje fue <br> encontrado</h3>
+                <p>Ingresa el texto que deseas encriptar o desencriptar</p>
+            </div>
+            <div class="containerBtnCopy">
+                <input type="button" class="btn-copy" value="Copiar">
+            </div>
+            <div class="containerResult">
+                <p class="containerTextResult"></p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p class="copyright">&copy;Copyright Moises Abraham Romero Mojica -
+            <script>document.write(new Date().getFullYear());</script>
+        </p>
+    </footer>    
+</body>
+
+</html>
