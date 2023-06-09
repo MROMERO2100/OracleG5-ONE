@@ -1,5 +1,9 @@
 #challengeonecodificador5
 
+[Breve Descripcion del Challenge:]
+
+Desarollar Una aplicación que encripta y desencripta textos, así podrás intercambiar mensajes secretos con otras personas que sepan el secreto de la encriptación utilizada.
+
 [Requisitos del Challenge:]
 
 Debe funcionar solo con letras minúsculas
